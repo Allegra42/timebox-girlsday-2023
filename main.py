@@ -21,7 +21,12 @@ from lib.helper import *
 red = (255, 0, 0)
 lila = (10, 0, 10)  # Lila setzt sich aus gleichen Anteilen von rot und blau zusammen.
 
-# TODO (Aufgabe 1): Definiere hier weitere Farben!
+# Lösung (Aufgabe 1): Definition weiterer Farben (Beispiel)
+blue = (0, 0, 255)
+yellow = (255, 255, 0)
+orange = (255, 128, 0)
+turquoise = (0, 255, 255)
+pink = (255, 0, 255)
 
 
 # Aufgabe 2: Farben anzeigen
@@ -29,7 +34,7 @@ lila = (10, 0, 10)  # Lila setzt sich aus gleichen Anteilen von rot und blau zus
 # Damit die Farben auch auf dem Ring angezeigt werden, schreiben wir eine Funktion,
 # die uns dabei hilft.
 # Der Ring hat 12 LEDs, die unabhängig von einander gesteuert werden können.
-# Dazu muss angegeben werden, welche LED in welcher Farbe leuchten soll.
+# Dazu muss angegeben werden welche, LED in welcher Farbe leuchten soll.
 # Der Code dazu sagt aus, setze das Pixel an der Stelle [Nummer] auf den Wert der Farbe.
 # number und color sind dabei Funktionsargumente. Wenn wir die Funktion später
 # nutzen, um die LEDs leuchten zu lassen, schreiben wir zum Beispiel:
@@ -41,7 +46,7 @@ lila = (10, 0, 10)  # Lila setzt sich aus gleichen Anteilen von rot und blau zus
 # Ergänze die fehlende Anweisung!
 def set_pixel(number, color):
     pixel[number] = color
-    # pixel.write() # TODO (Aufgabe 2): Kommentiere die Zeile aus, um die LEDs auch leuchten zu lassen
+    pixel.write()
 
 
 # Testzeit!
@@ -56,22 +61,27 @@ def setup():
     global pixel
 
     rtc = RTC()
-    pin = Pin(23, Pin.OUT)
+    pin = Pin(16, Pin.OUT)
     pixel = NeoPixel(pin, 12)
 
-    connect_to_wlan("inovexgast", "in0vexGast")
+    #connect_to_wlan("inovexgast", "in0vexGast")
+    connect_to_wlan("TrinityGast", "morpheus")
     set_exact_time(rtc)
 
-    # TODO (Aufgabe 2): Lass deine Farbe aufleuchten
-    #  - Nutze die Funktion set_pixel(number, color) hier, um LEDs direkt beim
-    #    Start des Mikrocontrollers leuchten zu lassen!
-    #  - Teste den Code
+    # Lösung (Aufgabe 2): Lass deine Farbe aufleuchten
+    set_pixel(0, red)
+    set_pixel(1, lila)
+    set_pixel(2, turquoise)
+    set_pixel(3, pink)
+    set_pixel(4, orange)
+    set_pixel(5, yellow)
+    set_pixel(6, blue)
 
 
 # Aufgabe 3: LEDs ausschalten
 #
 # Manchmal sollen die LEDs aber ja auch wieder ausgehen... alle.
-# Definiere zuerst oben eine "Farbe" für aus!
+# Definiere zuerst oben eine "Farbe" dafür!
 #
 # Natürlich könnte man jetzt mit set_pixel(number, color) jede LED einzeln ausschalten.
 # Aber Informatiker sind ziemlich faul und schreiben nicht gerne so viel ähnlichen Code.
@@ -87,8 +97,9 @@ def setup():
 #
 # Schreibe den fehlenden Code, damit alle 12 LEDs ausgeschaltet werden!
 def clear_pixels():
-    for i in range():  # TODO (Aufgabe 3): Lasse die Schleife 12 mal ausführen
-        pixel[i] = ()  # TODO (Aufgabe 3): Setze das Tupel (0, 0, 0) als Farbdefinition
+    # Lösung (Aufgabe 3)
+    for i in range(12):
+        pixel[i] = (0, 0, 0)
 
     pixel.write()
 
@@ -192,12 +203,11 @@ def clear_pixels():
 
 
 def set_time(hour, minute, second):
-    # TODO (Aufgabe 5): Schreibe die Logik für die Stunde, indem du 24 Stunden mittels 12 Pixel darstellst
-    # if hour > 11:
-    #     hour = hour - 12
-    # TODO (Aufgabe 5, optional): Passe die Zeitzone mit der Variable hour an
-    # hour = hour + 2  # fix time zone
-
+    # Lösung (Aufgabe 5): Setze die Pixel anhand der Zeit
+    hour = hour + 2  # fix time zone
+    if hour > 11:
+        hour = hour - 12
+    
     minute = int(minute / 5)
     second = int(second / 5)
     print("hour:")
@@ -205,10 +215,7 @@ def set_time(hour, minute, second):
     print("minute:")
     print(minute)
 
-    # TODO (Aufgabe 5): Setze den Pixel für die Stundenangabe analog zu der Minute und der Sekunde
-    # pixel[hour] = (10, 0, 0)
-    # TODO (Aufgabe 5): Teste den Code nun weiter unten in loop()
-
+    pixel[hour] = (10, 0, 0)
     pixel[minute] = (0, 10, 0)
     pixel[second] = (0, 0, 10)
 
@@ -228,28 +235,26 @@ def set_time(hour, minute, second):
 
 def loop():
     while True:
-        # TODO (Aufgabe 3): Lasse die LEDs in verschiedenen Farben leuchten
-        #  - Rufe dafür set_pixel(number, color) und clear_pixels() auf, um die LEDs in verschiedenen
-        #    Farben leuchten und blinken zu lassen!
-        #  - Teste den Code
-        #  Achtung:
-        #  Die Funktion loop() wird in einer ewigen Schleife ausgeführt!
-        #  Um einen Effekt zu sehen, muss zwischen den einzelnen Anweisungen etwas Zeit vergehen.
-        #  Nutze sleep(3) um das An- und Ausschalten zu verzögern!
-        #  Was passiert, wenn du sleep(10) schreibst?
+        # Lösung (Aufgabe 3, 4, 5): Nutze set_pixel(number, color) und clear_pixels() auf, um die LEDs in verschiedenen
+        # Farben leuchten und blinken zu lassen!
+        # Achtung:
+        # Die Funktion loop() wird in einer ewigen Schleife ausgeführt!
+        # Um einen Effekt zu sehen, muss zwischen den einzelnen Anweisungen etwas Zeit vergehen.
+        # Nutze sleep(3) um das An- und Ausschalten zu verzögern!
+        # Was passiert, wenn du sleep(10) schreibst?
 
-        # TODO (Aufgabe 4): Frage die Uhrzeit ab
-        #  - Speichere die jetzige Uhrzeit in einer Variable namens current_time
-        #  - Schreibe die Variable ins Log aus
-        # current_time = rtc.datetime()
-        # print(current_time)
+        # Nur Pixel setzen
+        clear_pixels()
+        set_pixel(0, red)
+        set_pixel(5, lila)
 
-        # TODO (Aufgabe 5): Setze die Zeit
-        #  - Setze die Zeit mit der jetzigen Uhrzeit, die du vorher gespeichert hast
-        #  - Teste den Code
-        # clear_pixels()
-        # set_time(current_time[4], current_time[5], current_time[6])
-        print("schlafe")  # TODO: Lösche die Zeile nach dem Testen
+        # Uhr
+        current_time = rtc.datetime()
+        print(current_time)
+
+        clear_pixels()
+        set_time(current_time[4], current_time[5], current_time[6])
+
         sleep(3)
 
 
