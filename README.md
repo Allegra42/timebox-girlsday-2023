@@ -18,6 +18,7 @@ Diese Steckbrücken müssen auf VCC -> 5V, GNC -> GND und IN auf euren ausgewäh
   MicroPython installieren oder aktualisieren. Ein Thonny-Neustart ist nach der Installation (des esptool) notwendig ;-)
   Anschließend nochmals zu Interpreter navigieren, wähle den richtigen Port aus und lade die Firmware (entweder von der [MicroPython-Seite](https://micropython.org/download/esp32) oder aus diesem Repo)
   mit dem Button installieren hoch.
+  (Tipp Raspi: falls sich das esptool nicht installieren lässt, kannst du alternativ in einem Terminal per <i> pip3 install esptool </i> dieses manuell installieren)
 
 
 ## Programm dauerhaft hochladen
