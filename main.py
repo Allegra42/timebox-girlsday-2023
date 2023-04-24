@@ -56,7 +56,7 @@ def setup():
     global pixel
 
     rtc = RTC()
-    pin = Pin(23, Pin.OUT)
+    pin = Pin(16, Pin.OUT)
     pixel = NeoPixel(pin, 12)
 
     connect_to_wlan("inovexgast", "in0vexGast")
@@ -192,11 +192,12 @@ def clear_pixels():
 
 
 def set_time(hour, minute, second):
+    # TODO (Aufgabe 5, optional): Passe die Zeitzone mit der Variable hour an
+    # hour = hour + 2  # fix time zone
+
     # TODO (Aufgabe 5): Schreibe die Logik für die Stunde, indem du 24 Stunden mittels 12 Pixel darstellst
     # if hour > 11:
     #     hour = hour - 12
-    # TODO (Aufgabe 5, optional): Passe die Zeitzone mit der Variable hour an
-    # hour = hour + 2  # fix time zone
 
     minute = int(minute / 5)
     second = int(second / 5)
