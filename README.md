@@ -5,7 +5,8 @@ dem Mikrocontroller ESP32 und einem Ring mit 12 LEDs!
 
 ## Vorbereitungen
 - Um den Mikrocontroller zu programmieren benötigen wir eine Entwicklungsumgebung und
-  müssen diese zuerst installieren. Wir nutzen [Thonny](https://thonny.org/)
+  müssen diese zuerst installieren. Wir nutzen [Thonny](https://thonny.org/). 
+  Auf der Thonny-Webseite findet ihr unter <i><Instructions & downloads></i> Informationen zur Installation.
 - Wenn nicht bereits geschehen muss der Mikrocontroller lernen, dass wir mit der Programmiersprache
   [MicroPython](https://micropython.org/) arbeiten wollen.
   Dazu müssen wir die MicroPython Firmware installieren.
