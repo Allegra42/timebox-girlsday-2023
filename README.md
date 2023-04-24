@@ -29,3 +29,7 @@ Diese Steckbrücken müssen auf VCC -> 5V, GNC -> GND und IN auf euren ausgewäh
 
 ## Link-Sammlung
 - Python-Kurs -> https://www.w3schools.com/python/default.asp 
+- ESP-Tool Installation
+  - https://randomnerdtutorials.com/flashing-micropython-firmware-esptool-py-esp32-esp8266/
+- Thonny Installation
+  - https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/#install-thonny-ide-linux
