@@ -14,9 +14,9 @@ Diese Steckbrücken müssen auf VCC -> 5V, GNC -> GND und IN auf euren ausgewäh
 - Wenn nicht bereits geschehen, muss der Mikrocontroller lernen, dass wir mit der Programmiersprache
   [MicroPython](https://micropython.org) arbeiten wollen.
   Dazu müssen wir die MicroPython installieren.
-  Gehe dazu in Werkzeuge->Optionen...->Interpreter (Raspi: Extras->Optionen...->Interpreter) und klicke unten rechts auf
+-- Gehe dazu in Werkzeuge->Optionen...->Interpreter (Raspi: Extras->Optionen...->Interpreter) und klicke unten rechts auf
   MicroPython installieren oder aktualisieren. Ein Thonny-Neustart ist nach der Installation (des esptool) notwendig ;-)
-  Anschließend nochmals zu Interpreter navigieren, wähle den richtigen Port aus und lade die Firmware (entweder von der [MicroPython-Seite](https://micropython.org/download/esp32) oder aus diesem Repo)
+--  Anschließend nochmals zu Interpreter navigieren, wähle den richtigen Port aus und lade die Firmware (entweder von der [MicroPython-Seite](https://micropython.org/download/esp32) oder aus diesem Repo)
   mit dem Button installieren hoch.
   (Tipp Raspi: falls sich das esptool nicht installieren lässt, kannst du alternativ in einem Terminal per <i> pip3 install esptool </i> dieses manuell installieren)
 
