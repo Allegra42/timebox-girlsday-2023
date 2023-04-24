@@ -25,3 +25,7 @@ Diese Steckbrücken müssen auf VCC -> 5V, GNC -> GND und IN auf euren ausgewäh
 - Hauptdatei muss main.py heißen!
 - Rechtsklick -> Upload to /
 - Auf ESP32 EN Button drücken
+
+
+## Link-Sammlung
+- Python-Kurs -> https://www.w3schools.com/python/default.asp 
