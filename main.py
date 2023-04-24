@@ -64,8 +64,7 @@ def setup():
     pin = Pin(16, Pin.OUT)
     pixel = NeoPixel(pin, 12)
 
-    #connect_to_wlan("inovexgast", "in0vexGast")
-    connect_to_wlan("TrinityGast", "morpheus")
+    connect_to_wlan("inovexgast", "in0vexGast")
     set_exact_time(rtc)
 
     # Lösung (Aufgabe 2): Lass deine Farbe aufleuchten
