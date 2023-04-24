@@ -12,11 +12,11 @@ Diese Steckbrücken müssen auf VCC -> 5V, GNC -> GND und IN auf euren ausgewäh
   müssen diese zuerst installieren. Wir nutzen [Thonny](https://thonny.org/). 
   Auf der Thonny-Webseite findet ihr unter <i><Instructions & downloads></i> Informationen zur Installation.
 - Wenn nicht bereits geschehen, muss der Mikrocontroller lernen, dass wir mit der Programmiersprache
-  [MicroPython](https://micropython.org/) arbeiten wollen.
-  Dazu müssen wir die MicroPython Firmware installieren.
+  [MicroPython](https://micropython.org) arbeiten wollen.
+  Dazu müssen wir die MicroPython installieren.
   Gehe dazu in Werkzeuge->Optionen...->Interpreter (Raspi: Extras->Optionen...->Interpreter) und klicke unten rechts auf
   MicroPython installieren oder aktualisieren. Ein Thonny-Neustart ist nach der Installation (des esptool) notwendig ;-)
-  Anschließend nochmals zu Interpreter navigieren, wähle den richtigen Port aus und lade die Firmware (entweder von der MicroPython Seite oder aus diesem Repo)
+  Anschließend nochmals zu Interpreter navigieren, wähle den richtigen Port aus und lade die Firmware (entweder von der [MicroPython-Seite](https://micropython.org/download/esp32) oder aus diesem Repo)
   mit dem Button installieren hoch.
 
 
