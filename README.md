@@ -5,11 +5,11 @@ dem Mikrocontroller ESP32 und einem (NeoPixel-)Ring mit 12 LEDs!
 
 ## Verkabeln
 Der NeoPixel hat 3 Kontakte, die bereits verlötet sind: VCC, GND und IN.
-Diese Steckbrücken müssen auf VCC -> 5V, GNC -> GND und IN auf euren ausgewählten GPIO (zB PIN #16) des ESPs gesteckt werden. 
+Diese Steckbrücken müssen auf VCC -> 5V, GNC -> GND und IN auf euren ausgewählten GPIO (zB PIN #16) des ESPs gesteckt werden.
 
 ## Vorbereitungen
 - Um den Mikrocontroller zu programmieren benötigen wir eine Entwicklungsumgebung und
-  müssen diese zuerst installieren. Wir nutzen [Thonny](https://thonny.org/). 
+  müssen diese zuerst installieren. Wir nutzen [Thonny](https://thonny.org/).
   Auf der Thonny-Webseite findet ihr unter <i><Instructions & downloads></i> Informationen zur Installation.
 - Wenn nicht bereits geschehen, muss der Mikrocontroller lernen, dass wir mit der Programmiersprache
   [MicroPython](https://micropython.org) arbeiten wollen.
@@ -22,13 +22,17 @@ Diese Steckbrücken müssen auf VCC -> 5V, GNC -> GND und IN auf euren ausgewäh
 
 
 ## Programm dauerhaft hochladen
-- Hauptdatei muss main.py heißen!
-- Rechtsklick -> Upload to /
-- Auf ESP32 EN Button drücken
+Um deine TimeBox auch wirklich als Uhr zu nutzen möchtest du sie sicher nicht immer am Laptop angesteckt lassen.
+Das ist natürlich kein Problem! Der ESP führt den Code auch ohne Thonny aus. Dazu muss aber all der benötigte Code
+in einer gewissen Art hochgeladen werden und Hauptdatei muss main.py heißen!
+
+- Wechsle zuerst in der Leiste links in den Ordner *timebox*, klicke dort mit der rechten Maustaste auf *lib* und wähle -> Upload to /
+- Mache das gleiche nochmals für die Datei *main.py*
+- Drücke auf deinem ESP32 Mikrocontroller den Button EN, um das Programm unabhängig von Thonny zu starten
 
 
 ## Link-Sammlung
-- Python-Kurs -> https://www.w3schools.com/python/default.asp 
+- Python-Kurs -> https://www.w3schools.com/python/default.asp
 - ESP-Tool Installation
   - https://randomnerdtutorials.com/flashing-micropython-firmware-esptool-py-esp32-esp8266/
 - Thonny Installation
