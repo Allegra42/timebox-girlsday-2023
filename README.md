@@ -38,6 +38,9 @@ in einer gewissen Art hochgeladen werden und Hauptdatei muss main.py heißen!
 - Mache das gleiche nochmals für die Datei *main.py*
 - Drücke auf deinem ESP32 Mikrocontroller den Button RST (oder EN, je nach ESP), um das Programm unabhängig von Thonny zu starten
 
+## Solution.py
+In der Datei *solution.py* findet ihr eine Lösungsvariante. Wenn ihr den Inhalt in *main.py* überträgt, erhaltet ihr die funktionsfähige "timebox"-Uhr.
+
 
 ## Link-Sammlung
 - Python-Kurs -> https://www.w3schools.com/python/default.asp
